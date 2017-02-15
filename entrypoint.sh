@@ -6,5 +6,6 @@ sed -e "s/127.0.0.1/$HOST/" -i /etc/nginx/conf.d/default.conf
 sed -e "s/80/$PORT/" -i /etc/nginx/conf.d/default.conf
 
 htpasswd -c -b /etc/nginx/.htpasswd $USER $PASS
+htpasswd -c -b /etc/nginx/.htpasswd $USER1 $PASS1
 
 nginx -g "daemon off;"
